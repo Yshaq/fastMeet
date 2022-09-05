@@ -21,6 +21,7 @@ import {  Button, List, ListItem, ListItemText } from "@mui/material";
 const Profile = () => {
   // const classes=useStyles()
   const userObject = useContext(UserContext)
+  const navigate = useNavigate();
 
     return (
       <>

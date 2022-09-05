@@ -16,13 +16,13 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    failureRedirect: "http://localhost:3001/",
+    failureRedirect: "https://fastmeet-frontend.netlify.app/",
     // successRedirect: "/protected",
     failureFlash: true,
   }),
   async function (req, res) {
     console.log("/google callback", req.user);
-    res.redirect("http://localhost:3001/");
+    res.redirect("https://fastmeet-frontend.netlify.app/");
   }
 );
 
@@ -36,7 +36,7 @@ router.get("/logout", (req, res) => {
   req.flash("success", "Successfully logged out");
   req.session.destroy(function () {
     res.clearCookie("connect.sid");
-    res.redirect("http://localhost:3001/");
+    res.redirect("https://fastmeet-frontend.netlify.app/");
   });
 });
 
