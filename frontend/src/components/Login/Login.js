@@ -51,7 +51,7 @@ const Login = ({ setUserState }) => {
     useEffect(() => {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
             console.log(user);
-            axios.post("http://localhost:3000/user/login", user).then((res) => {
+            axios.post("https://fastmeet-backend.herokuapp.com/user/login", user).then((res) => {
                 alert(res.data.message);
                 setUserObject(res.data.user);
                 navigate("/", { replace: true });
@@ -66,7 +66,7 @@ const Login = ({ setUserState }) => {
                     style={{margin:"auto", width:"200px", height:"200px"}}
                     alt="Remy Sharp"
                     src={logo}
-                    onClick={() => {window.location="http://localhost:3001"}}
+                    onClick={() => {navigate("/")}}
                 />
                 <form>
                     <h1>Login</h1>
@@ -93,7 +93,7 @@ const Login = ({ setUserState }) => {
                     </button>
                 </form>
                 <div >
-                    <GoogleButton style={{margin:"auto", width: "70%"}} onClick={() => { window.location.replace("http://localhost:3000/auth/google/") }} />
+                    <GoogleButton style={{margin:"auto", width: "70%"}} onClick={() => { window.location.replace("https://fastmeet-backend.herokuapp.com/auth/google/") }} />
                 </div>
                 <NavLink to="/signup">Not yet registered? Register Now</NavLink>
 

@@ -27,7 +27,7 @@ const Profile = () => {
         <div className="nav_bar">
           <div className="left_nav_bar">
             <div className="logo">
-              <img onClick={() => { window.location = "http://localhost:3001/" }} src={logo} alt="meet online" />
+              <img onClick={() => { navigate('/') }} src={logo} alt="meet online" />
             </div>
             <div className="logo_content">Meet Online</div>
           </div>

@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 const cors = require("cors");
-app.use(cors({ origin: "http://localhost:3001", credentials: true }));
+app.use(cors({ origin: "https://fastmeet-frontend.netlify.app/", credentials: true }));
 
 // const cors = require('cors');
 // const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002'];
@@ -141,7 +141,7 @@ io.on('connection', socket => {
 
 
 app.get("/", (req, res) => {
-  res.send('<a href="http://localhost:3000/auth/google"> Login </a>');
+  res.send('<a href="https://fastmeet-backend.herokuapp.com/auth/google"> Login </a>');
 });
 
 app.get("/getUser", (req, res) => {

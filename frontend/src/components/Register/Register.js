@@ -66,7 +66,7 @@ const Register = () => {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      axios.post("http://localhost:3000/user/register/", user, {
+      axios.post("https://fastmeet-backend.herokuapp.com/user/register/", user, {
         headers: { "Content-Type": "application/json" },
         withCredentials: true,
       }).then((res) => {
@@ -84,7 +84,7 @@ const Register = () => {
           style={{ margin: "auto", width: "200px", height: "200px" }}
           alt="Remy Sharp"
           src={logo}
-          onClick={() => { window.location = "http://localhost:3001" }}
+          onClick={() => { navigate('/') }}
         />
         <form>
           <h1>Create your account</h1>
