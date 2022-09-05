@@ -156,6 +156,6 @@ app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
 app.use("/p", protectedRoutes);
 
-server.listen(port, () => {
+server.listen(process.env.PORT || port, () => {
   console.log(`Example app listening on port ${port}...`);
 });
