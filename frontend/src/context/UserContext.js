@@ -7,7 +7,7 @@ function UserContextProvider(props) {
     const [userObject, setUserObject] = useState({});
     useEffect(() => {
         console.log("context");
-        axios.get("http://localhost:3000/getUser/", { withCredentials: true }).then((res) => {
+        axios.get("https://fastmeet-backend.herokuapp.com/getUser/", { withCredentials: true }).then((res) => {
             if (res.data) {
                 setUserObject(res.data);
             } else {

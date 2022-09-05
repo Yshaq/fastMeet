@@ -43,7 +43,7 @@ const Profile = () => {
                   </ListItem>
                   <ListItem>
                     <Button
-                      href="http://localhost:3000/auth/logout/"
+                      href="https://fastmeet-backend.herokuapp.com/auth/logout/"
                       variant="contained"
                       color="secondary"
                     >

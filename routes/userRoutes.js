@@ -11,8 +11,8 @@ require("../config/local");
 
 router.post('/signin',
     passport.authenticate('LocalStrategy', {
-        successRedirect: 'http://localhost:3001/',
-        failureRedirect: 'http://localhost:3001/login',
+        successRedirect: 'https://fastmeet-frontend.netlify.app/',
+        failureRedirect: 'https://fastmeet-frontend.netlify.app/login',
         failureFlash: true
     })
 );
@@ -30,7 +30,7 @@ router.post('/register', async (req, res) => {
             source: "manual",
         })
         res.json({ status: 'ok' })
-        // res.redirect('http://localhost:3001/login/');
+        // res.redirect('https://fastmeet-frontend.netlify.app/login/');
     } catch (err) {
         console.log(err)
         res.json({ status: 'error', error: 'Duplicate email' })

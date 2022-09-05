@@ -23,7 +23,7 @@ const cors = require("cors");
 app.use(cors({ origin: "https://fastmeet-frontend.netlify.app/", credentials: true }));
 
 // const cors = require('cors');
-// const whitelist = ['http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002'];
+// const whitelist = ['https://fastmeet-backend.herokuapp.com', 'https://fastmeet-frontend.netlify.app', 'http://localhost:3002'];
 // const corsOptions = {
 //   credentials: true, // This is important.
 //   origin: (origin, callback) => {

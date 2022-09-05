@@ -36,7 +36,7 @@ const MeetPage = () => {
     const [isAudio, setIsAudio] = useState(true)
 
     useEffect(() => {
-        // socketRef.current = io("http://localhost:3000/");        
+        // socketRef.current = io("https://fastmeet-backend.herokuapp.com/");        
         // console.log('socket made', socketRef.current)
 
         navigator.mediaDevices.getUserMedia({ video: {width: { min: 480, ideal: 720, max: 1280 }, aspectRatio: 1.33333 }, audio: true }).then(stream => {
