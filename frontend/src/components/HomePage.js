@@ -82,7 +82,7 @@ function HomePage() {
         </div>
       </div>
       <div className="home_section">
-        {isAuthenticated ? (
+        {/* {isAuthenticated ? ( */}
           <div className="left_section">
             <div className="main_heading">
               Peer to Peer video conferencing for everyone!
@@ -94,7 +94,7 @@ function HomePage() {
               <button
                 id="start_meeting_button"
                 className="main_button"
-                onClick={checkUserAuth}
+                onClick={createRoom}
               >
                 <span>
                   <VideoCallOutlined />
@@ -134,14 +134,17 @@ function HomePage() {
               }}>Join</Button>
             </div>
           </div>
-        ) : (
+        {/* ) 
+        : 
+        (
           <div className="left_section">
             <div className="main_heading">Login to use FastMeet</div>
             <div className="main_paragraph">
               <p>You must first login using google account to call someone</p>
             </div>
           </div>
-        )}
+        )} */}
+
         <div className="right_section">
           <div className="main_image">
             <img style={{width: '700px', height: '500px'}} src={meet_image} alt="" />
